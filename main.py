@@ -18,9 +18,18 @@ def is_prime(n):
 Returneaza produsul numerelor din lista lst.
 '''
 def get_product(lst):
-  # codul vostru aici
-  
-  
+  n = int(input("Da lungimea listei"))
+  p = 1
+  for i in range(n):
+    nr = int(input("Da urmatorul numar"))
+    lst.append(nr)
+  i = 0
+  while i < len(lst):
+    p = p * lst[i]
+    i = i + 1
+
+  return p
+
 '''
 Returneaza CMMDC a doua numere x si y folosind primul algoritm.
 '''
