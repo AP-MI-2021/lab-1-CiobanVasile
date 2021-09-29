@@ -61,7 +61,30 @@ def get_cmmdc_v2(x, y):
   
   
 def main():
-  # interfata de tip consola aici
+  nr=int(input("Ce problema vrei rezolvata?"))
+
+  if nr==1:
+    print("Problema de numere prime")
+    n=int(input("Da numarul"))
+    print(is_prime(n))
+
+  if nr==2:
+    print("CMMDC prin prima metoda")
+    a=int(input("Da primul numar"))
+    b=int(input("Da al doilea numar"))
+    print(get_cmmdc_v1(a,b))
+
+  if nr==3:
+    print("CMMDC prin a doua metoda")
+    a=int(input("Da primul numar"))
+    b = int(input("Da al doilea numar"))
+    print(get_cmmdc_v2(a, b))
+
+  if nr==4:
+    print("Produsul a n numere")
+    thislist =[]
+    print(get_product(thislist))
+
 
 if __name__ == '__main__':
   main()
