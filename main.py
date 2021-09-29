@@ -1,15 +1,19 @@
 '''
 Returneaza true daca n este prim si false daca nu.
 '''
+
+
 def is_prime(n):
   if n <= 1:
     return False
+  if n==2:
+    return True
   if n % 2 == 0:
     return False
   div = 3
   while div * div <= n:
     if n % div == 0:
-      return False
+        return False
     div = div + 2
 
   return True
@@ -18,10 +22,10 @@ def is_prime(n):
 Returneaza produsul numerelor din lista lst.
 '''
 def get_product(lst):
-  n = int(input("Da lungimea listei"))
+  n = int(input("Da lungimea listei: "))
   p = 1
   for i in range(n):
-    nr = int(input("Da urmatorul numar"))
+    nr = int(input("Da al "+str(i+1)+"-lea numar "))
     lst.append(nr)
   i = 0
   while i < len(lst):
@@ -61,27 +65,27 @@ def get_cmmdc_v2(x, y):
   
   
 def main():
-  nr=int(input("Ce problema vrei rezolvata?"))
+  nr=int(input("Ce problema vrei rezolvata?(1=Prime,2=CMMDC scadere,3=CMMDC impartire,4:Produs din lista): "))
 
   if nr==1:
-    print("Problema de numere prime")
-    n=int(input("Da numarul"))
+    print("Problema de numere prime.")
+    n=int(input("Da numarul: "))
     print(is_prime(n))
 
   if nr==2:
-    print("CMMDC prin prima metoda")
-    a=int(input("Da primul numar"))
-    b=int(input("Da al doilea numar"))
+    print("CMMDC prin metoda scaderii.")
+    a=int(input("Da primul numar: "))
+    b=int(input("Da al doilea numar: "))
     print(get_cmmdc_v1(a,b))
 
   if nr==3:
-    print("CMMDC prin a doua metoda")
-    a=int(input("Da primul numar"))
-    b = int(input("Da al doilea numar"))
+    print("CMMDC prin metoda impartirii.")
+    a=int(input("Da primul numar: "))
+    b = int(input("Da al doilea numar: "))
     print(get_cmmdc_v2(a, b))
 
   if nr==4:
-    print("Produsul a n numere")
+    print("Produsul a n numere: ")
     thislist =[]
     print(get_product(thislist))
 
