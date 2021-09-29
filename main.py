@@ -34,12 +34,7 @@ def get_product(lst):
 Returneaza CMMDC a doua numere x si y folosind primul algoritm.
 '''
 def get_cmmdc_v1(x, y):
-  while x != y:
-    if x < y:
-      y = y - x
-    else:
-      x = x - y
-  return x
+ 
 
   
 '''
